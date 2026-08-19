@@ -7,7 +7,6 @@ import {
   MapPinIcon,
   ClockIcon,
   InstagramIcon,
-  FacebookIcon,
 } from "./icons";
 import { business, services } from "@/lib/site-config";
 
@@ -36,15 +35,6 @@ export function Footer() {
               className="text-cream-200/70 hover:text-brass-400"
             >
               <InstagramIcon className="h-5 w-5" />
-            </a>
-            <a
-              href={business.social.facebook}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-              className="text-cream-200/70 hover:text-brass-400"
-            >
-              <FacebookIcon className="h-5 w-5" />
             </a>
           </div>
         </div>

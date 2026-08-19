@@ -12,12 +12,10 @@ export const business = {
   tagline: "Marine Carpentry & Refinishing, Done Right",
   domain: "piratetaylorsmarine.com",
 
-  // TODO: replace with the real phone number (digits only for the tel: link)
-  phoneDisplay: "(619) 555-0199",
-  phoneTel: "+16195550199",
+  phoneDisplay: "(714) 329-9718",
+  phoneTel: "+17143299718",
 
-  // TODO: replace with the real business email
-  email: "info@piratetaylorsmarine.com",
+  email: "Piratetaylorsmarine@gmail.com",
 
   // Service area
   primaryCity: "San Diego, CA",
@@ -40,10 +38,8 @@ export const business = {
     { day: "Sunday", time: "Closed" },
   ],
 
-  // TODO: add real social links, or remove entries that don't apply
   social: {
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
+    instagram: "https://instagram.com/pirate_taylor",
   },
 };
 
