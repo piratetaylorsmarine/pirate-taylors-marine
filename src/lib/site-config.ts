@@ -40,6 +40,7 @@ export const business = {
 
   social: {
     instagram: "https://instagram.com/pirate_taylor",
+    facebook: "https://www.facebook.com/taylor.arroway",
   },
 };
 
