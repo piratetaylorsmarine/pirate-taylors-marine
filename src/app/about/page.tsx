@@ -5,8 +5,16 @@ import { AnchorIcon, CheckIcon, MapPinIcon } from "@/components/icons";
 import { business } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `About | ${business.name}`,
-  description: `Learn about ${business.name}, marine carpentry and refinishing serving ${business.serviceArea}.`,
+  title: "About Pirate Taylor's Marine | Chula Vista & San Diego Marine Carpenter",
+  description:
+    "Pirate Taylor's Marine is a 5-star rated marine carpentry and refinishing company based at 640 Marina Pkwy, Chula Vista, CA. Serving San Diego and Southern California boat owners.",
+  alternates: { canonical: "https://piratetaylorsmarine.com/about" },
+  openGraph: {
+    title: "About Pirate Taylor's Marine | Chula Vista & San Diego Marine Carpenter",
+    description:
+      "5-star rated marine carpentry and refinishing based in Chula Vista, CA. Serving San Diego and all of Southern California.",
+    url: "https://piratetaylorsmarine.com/about",
+  },
 };
 
 const values = [

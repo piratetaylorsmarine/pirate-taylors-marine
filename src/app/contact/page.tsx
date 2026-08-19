@@ -11,8 +11,16 @@ import {
 import { business } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Contact | ${business.name}`,
-  description: `Get a free quote from ${business.name}. Serving ${business.serviceArea}.`,
+  title: "Get a Free Quote | Pirate Taylor's Marine — Chula Vista & San Diego, CA",
+  description:
+    "Contact Pirate Taylor's Marine for a free estimate on marine carpentry, brightwork, boat painting, or electrical work. Based in Chula Vista, CA — serving San Diego and Southern California. Call (714) 329-9718.",
+  alternates: { canonical: "https://piratetaylorsmarine.com/contact" },
+  openGraph: {
+    title: "Get a Free Quote | Pirate Taylor's Marine — Chula Vista & San Diego, CA",
+    description:
+      "Free estimates on marine carpentry, brightwork, boat painting, and electrical. Chula Vista, CA. Call (714) 329-9718.",
+    url: "https://piratetaylorsmarine.com/contact",
+  },
 };
 
 export default function ContactPage() {

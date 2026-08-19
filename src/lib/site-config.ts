@@ -17,12 +17,28 @@ export const business = {
 
   email: "Piratetaylorsmarine@gmail.com",
 
+  address: {
+    street: "640 Marina Pkwy",
+    city: "Chula Vista",
+    state: "CA",
+    zip: "91910",
+    full: "640 Marina Pkwy, Chula Vista, CA 91910",
+  },
+
+  googleMapsUrl:
+    "https://www.google.com/maps/place/Pirate+Taylor%27s+Marine+Services/@32.6,-117.1,17z/data=!4m2!3m1!1s0x0:0x77b6111314868479",
+
+  googleRating: 5,
+  googleReviewCount: 3,
+
   // Service area
-  primaryCity: "San Diego, CA",
-  serviceArea: "San Diego & all of Southern California",
+  primaryCity: "Chula Vista, CA",
+  serviceArea: "San Diego & Southern California",
   serviceCities: [
+    "Chula Vista",
     "San Diego",
     "Coronado",
+    "National City",
     "Oceanside",
     "Dana Point",
     "Newport Beach",
@@ -31,7 +47,6 @@ export const business = {
     "San Pedro",
   ],
 
-  // TODO: confirm hours
   hours: [
     { day: "Monday – Friday", time: "7:00 AM – 5:00 PM" },
     { day: "Saturday", time: "By appointment" },

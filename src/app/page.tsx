@@ -11,6 +11,27 @@ import {
 } from "@/components/icons";
 import { business, services } from "@/lib/site-config";
 
+const REVIEWS = [
+  {
+    name: "Claudio Cordero",
+    rating: 5,
+    quote:
+      "Taylor did an outstanding job working on my boat! He handled everything from varnish work to building custom cabinets and refinishing the teak padding, and the results were exceptional. His attention to detail and craftsmanship really stand out — every surface looks flawless, and the custom pieces fit perfectly with the boat's design. He was also professional, reliable, and easy to communicate with throughout the project.",
+  },
+  {
+    name: "Kasey Baltz",
+    rating: 5,
+    quote:
+      "Taylor Arroway's Marine Carpentry was excellent, quality craftsmanship and unique woodworking — he makes any home or boat uniquely beautiful and luxurious.",
+  },
+  {
+    name: "Jaz Kaner",
+    rating: 5,
+    quote:
+      "The best woodwork I've seen anywhere. Literally 'resurrected' our old boat. (And added $$ to the resale!) Worth every penny.",
+  },
+];
+
 const serviceIcons: Record<string, ComponentType<{ className?: string }>> = {
   "brightwork-varnishing": VarnishIcon,
   "marine-carpentry": CarpentryIcon,
@@ -142,6 +163,50 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Reviews */}
+      <section className="py-24 bg-cream-100">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <a
+              href={business.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-teak-600 hover:text-teak-500"
+            >
+              <span>★★★★★</span>
+              <span>5.0 · {business.googleReviewCount} Reviews on Google</span>
+            </a>
+            <h2 className="font-display mt-4 text-3xl text-navy-950 sm:text-4xl">
+              What Boat Owners Say
+            </h2>
+          </div>
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {REVIEWS.map((r) => (
+              <div
+                key={r.name}
+                className="flex flex-col gap-4 rounded-sm border border-teak-200 bg-white p-7"
+              >
+                <div className="text-brass-500 tracking-wide">{"★".repeat(r.rating)}</div>
+                <p className="flex-1 text-sm leading-relaxed text-navy-800/85 italic">
+                  &ldquo;{r.quote}&rdquo;
+                </p>
+                <div className="font-semibold text-sm text-navy-950">{r.name}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href={business.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-sm border border-teak-300 bg-white px-6 py-3 text-sm font-semibold text-navy-950 hover:border-brass-500 hover:text-brass-600 transition-colors"
+            >
+              See all reviews on Google →
+            </a>
           </div>
         </Container>
       </section>

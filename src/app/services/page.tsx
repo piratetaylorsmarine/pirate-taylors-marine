@@ -13,8 +13,16 @@ import {
 import { business, services, relatedServices } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Services | ${business.name}`,
-  description: `Marine carpentry, brightwork, painting, and electrical services in ${business.serviceArea}.`,
+  title: "Marine Carpentry & Brightwork Services — Chula Vista & San Diego, CA",
+  description:
+    "Brightwork & varnishing, custom marine carpentry, boat painting & refinishing, and marine electrical — serving Chula Vista, San Diego, Coronado, and all of Southern California. Free estimates.",
+  alternates: { canonical: "https://piratetaylorsmarine.com/services" },
+  openGraph: {
+    title: "Marine Carpentry & Brightwork Services — Chula Vista & San Diego, CA",
+    description:
+      "Expert brightwork, custom woodwork, boat painting, and marine electrical in Chula Vista & San Diego. Free estimates.",
+    url: "https://piratetaylorsmarine.com/services",
+  },
 };
 
 const serviceIcons: Record<string, ComponentType<{ className?: string }>> = {

@@ -5,8 +5,16 @@ import { AnchorIcon, ImageIcon } from "@/components/icons";
 import { business, services } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Gallery | ${business.name}`,
-  description: `Project photos from ${business.name} — marine carpentry, brightwork, painting, and electrical work.`,
+  title: "Project Gallery | Pirate Taylor's Marine — San Diego Marine Carpentry",
+  description:
+    "Photos of marine carpentry, brightwork restoration, boat painting, and refinishing projects by Pirate Taylor's Marine in Chula Vista & San Diego, CA.",
+  alternates: { canonical: "https://piratetaylorsmarine.com/gallery" },
+  openGraph: {
+    title: "Project Gallery | Pirate Taylor's Marine — San Diego Marine Carpentry",
+    description:
+      "Marine carpentry, brightwork, and boat painting project photos from Chula Vista & San Diego, CA.",
+    url: "https://piratetaylorsmarine.com/gallery",
+  },
 };
 
 // TODO: Replace these placeholder tiles with real project photos.
