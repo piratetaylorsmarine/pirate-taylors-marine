@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f1e7;
+  --foreground: #10203a;
+}
+
+@theme inline {
+  --color-navy-950: #081428;
+  --color-navy-900: #0c1f3b;
+  --color-navy-800: #122c52;
+  --color-navy-700: #1a3d6e;
+  --color-navy-600: #26538f;
+
+  --color-teak-700: #5c3c22;
+  --color-teak-600: #7a4f2c;
+  --color-teak-500: #966339;
+  --color-teak-300: #c99b6c;
+  --color-teak-200: #e3caa8;
+
+  --color-brass-500: #c69430;
+  --color-brass-400: #d9ac54;
+  --color-brass-300: #e7c682;
+
+  --color-cream-100: #fbf8f1;
+  --color-cream-200: #f6f1e7;
+  --color-cream-300: #ece1cc;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 0.125rem;
+  border: 1px solid var(--color-teak-200);
+  background: var(--color-cream-100);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.925rem;
+  color: var(--color-navy-950);
+}
+
+.form-input:focus {
+  outline: 2px solid var(--color-brass-500);
+  outline-offset: 1px;
+  border-color: var(--color-brass-500);
+}
+
+/* Subtle wave texture used behind hero / CTA sections */
+.wave-texture {
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(198, 148, 48, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 60%, rgba(198, 148, 48, 0.06), transparent 45%);
+}
