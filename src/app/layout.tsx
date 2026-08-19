@@ -36,6 +36,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Pirate Taylor's Marine", url: "https://piratetaylorsmarine.com" }],
   creator: "Pirate Taylor's Marine",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.svg",
+  },
   robots: {
     index: true,
     follow: true,
