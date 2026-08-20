@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, ReactNode, useState } from "react";
-import { services } from "@/lib/site-config";
+import { business, services } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -12,11 +12,21 @@ export function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // TODO: replace this with a real submission via Formspree or similar.
-    await new Promise((resolve) => setTimeout(resolve, 600));
+    const form = e.currentTarget;
 
-    setStatus("success");
-    e.currentTarget.reset();
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
@@ -142,6 +152,13 @@ export function ContactForm() {
           Attach photos of your boat or the area needing work — helps Taylor provide an accurate quote.
         </p>
       </Field>
+
+      {status === "error" && (
+        <p className="text-sm font-medium text-crimson-600">
+          Something went wrong sending your message. Please try again, or
+          call/email directly at {business.phoneDisplay} / {business.email}.
+        </p>
+      )}
 
       <button
         type="submit"
