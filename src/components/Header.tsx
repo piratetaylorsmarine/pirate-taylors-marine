@@ -40,7 +40,7 @@ export function Header() {
             src="/logo.jpg"
             alt={business.name}
             style={{ display: 'block', background: 'white' }}
-            className="h-5 w-auto lg:h-[76px]"
+            className="h-5 w-auto lg:h-[91px]"
           />
         </Link>
 
