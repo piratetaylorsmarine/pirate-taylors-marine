@@ -61,26 +61,37 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="wave-texture relative overflow-hidden bg-navy-950 text-cream-100">
-        <Container className="relative flex flex-col items-start gap-8 py-24 sm:py-32">
-          <span className="flex items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-400">
-            <AnchorIcon className="h-3.5 w-3.5" />
-            {business.serviceArea}
-          </span>
-          <h1 className="font-display max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
-            {business.tagline}
-          </h1>
-          <p className="max-w-xl text-lg leading-relaxed text-cream-200/85">
-            Custom marine carpentry, brightwork restoration, painting, and
-            electrical work for boat owners across San Diego and Southern
-            California. Built by hand, finished to last.
-          </p>
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Button href="/contact" variant="primary">
-              Get a Free Quote
-            </Button>
-            <Button href="/gallery" variant="secondary">
-              View Our Work
-            </Button>
+        <Container className="relative grid grid-cols-1 items-center gap-12 py-24 sm:py-32 lg:grid-cols-2">
+          <div className="flex flex-col items-start gap-8">
+            <span className="flex items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-400">
+              <AnchorIcon className="h-3.5 w-3.5" />
+              {business.serviceArea}
+            </span>
+            <h1 className="font-display max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
+              {business.tagline}
+            </h1>
+            <p className="max-w-xl text-lg leading-relaxed text-cream-200/85">
+              Custom marine carpentry, brightwork restoration, painting, and
+              electrical work for boat owners across San Diego and Southern
+              California. Built by hand, finished to last.
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Button href="/contact" variant="primary">
+                Get a Free Quote
+              </Button>
+              <Button href="/projects" variant="secondary">
+                View Our Work
+              </Button>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/unnamed.webp"
+              alt="Classic wooden sailboat teak cockpit restoration — Pirate Taylor's Marine"
+              className="w-full rounded-sm object-cover shadow-2xl shadow-navy-950"
+              style={{ aspectRatio: "3/4", maxHeight: "560px" }}
+            />
           </div>
         </Container>
       </section>
@@ -142,6 +153,51 @@ export default function Home() {
             <Button href="/services" variant="ghost">
               See All Services →
             </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Recent Work photo showcase */}
+      <section className="py-20 bg-cream-50">
+        <Container>
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <h2 className="font-display text-3xl text-navy-950 sm:text-4xl">Recent Work</h2>
+              <p className="mt-2 text-navy-800/75">A few shots from the water.</p>
+            </div>
+            <Button href="/projects" variant="ghost">
+              See All Projects →
+            </Button>
+          </div>
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/Screenshot_20260819_181041_Photos.jpg"
+              alt="Classic sloop Footloose — teak brightwork restoration"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "3/4" }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/IMG_20260724_121040_159.webp"
+              alt="Custom hand-carved teak bowsprit scroll — Pirate Taylor's Marine"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "3/4" }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/IMG_20260623_170639_259.webp"
+              alt="Fresh nonskid deck paint — cruising sailboat"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "3/4" }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/Screenshot_20260819_180554_Photos.jpg"
+              alt="Classic wooden sailboat full teak cockpit restoration"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "3/4" }}
+            />
           </div>
         </Container>
       </section>
