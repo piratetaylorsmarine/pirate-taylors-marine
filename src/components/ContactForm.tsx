@@ -5,17 +5,6 @@ import { services } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-// -----------------------------------------------------------------------
-// This form currently only validates + shows a confirmation message on the
-// client. No email is actually sent yet.
-//
-// To wire it up for real, the easiest options are:
-//   1. Formspree (https://formspree.io) — swap the onSubmit handler below
-//      for a plain <form action="https://formspree.io/f/xxxxxxx" method="POST">
-//   2. A Next.js Route Handler (src/app/api/contact/route.ts) that sends
-//      the payload via Resend, SendGrid, etc., called via fetch() below.
-// -----------------------------------------------------------------------
-
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
@@ -23,7 +12,7 @@ export function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // TODO: replace this with a real submission (see comment above).
+    // TODO: replace this with a real submission via Formspree or similar.
     await new Promise((resolve) => setTimeout(resolve, 600));
 
     setStatus("success");
@@ -35,7 +24,7 @@ export function ContactForm() {
       <div className="rounded-sm border border-brass-400 bg-brass-500/10 p-8 text-center">
         <p className="font-display text-xl text-navy-950">Thanks — message sent.</p>
         <p className="mt-2 text-sm text-navy-800/80">
-          We&rsquo;ll get back to you shortly to talk through your project.
+          Taylor will get back to you shortly to discuss your project and provide a quote.
         </p>
         <button
           type="button"
@@ -50,8 +39,10 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+
+      {/* Contact Info */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <Field label="Full Name" htmlFor="name">
+        <Field label="Full Name *" htmlFor="name">
           <input
             id="name"
             name="name"
@@ -61,7 +52,7 @@ export function ContactForm() {
             placeholder="Jane Smith"
           />
         </Field>
-        <Field label="Phone" htmlFor="phone">
+        <Field label="Phone *" htmlFor="phone">
           <input
             id="phone"
             name="phone"
@@ -73,7 +64,7 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <Field label="Email" htmlFor="email">
+      <Field label="Email *" htmlFor="email">
         <input
           id="email"
           name="email"
@@ -84,8 +75,9 @@ export function ContactForm() {
         />
       </Field>
 
+      {/* Boat Info */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <Field label="Boat Make / Model" htmlFor="boat">
+        <Field label="Boat Make & Model" htmlFor="boat">
           <input
             id="boat"
             name="boat"
@@ -94,30 +86,61 @@ export function ContactForm() {
             placeholder="e.g. 2004 Catalina 36"
           />
         </Field>
-        <Field label="Service Interested In" htmlFor="service">
-          <select id="service" name="service" className="form-input" defaultValue="">
-            <option value="" disabled>
-              Select a service
-            </option>
-            {services.map((s) => (
-              <option key={s.slug} value={s.name}>
-                {s.name}
-              </option>
-            ))}
-            <option value="Other">Other / Not sure</option>
-          </select>
+        <Field label="Boat Length" htmlFor="boat_size">
+          <input
+            id="boat_size"
+            name="boat_size"
+            type="text"
+            className="form-input"
+            placeholder="e.g. 36 ft"
+          />
         </Field>
       </div>
 
-      <Field label="Tell us about your project" htmlFor="message">
+      <Field label="Marina / Location of Boat" htmlFor="location">
+        <input
+          id="location"
+          name="location"
+          type="text"
+          className="form-input"
+          placeholder="e.g. Chula Vista Marina, San Diego"
+        />
+      </Field>
+
+      <Field label="Service Needed" htmlFor="service">
+        <select id="service" name="service" className="form-input" defaultValue="">
+          <option value="" disabled>Select a service</option>
+          {services.map((s) => (
+            <option key={s.slug} value={s.name}>{s.name}</option>
+          ))}
+          <option value="Multiple / Not sure">Multiple / Not sure</option>
+        </select>
+      </Field>
+
+      <Field label="Describe the Work Needed *" htmlFor="message">
         <textarea
           id="message"
           name="message"
           required
           rows={5}
           className="form-input resize-none"
-          placeholder="What are you looking to have done, and where's the boat located?"
+          placeholder="Tell Taylor what needs to be done — the more detail the better. Include any measurements, materials, or condition of current work if relevant."
         />
+      </Field>
+
+      {/* Photo Upload */}
+      <Field label="Photos (optional)" htmlFor="photos">
+        <input
+          id="photos"
+          name="photos"
+          type="file"
+          multiple
+          accept="image/*"
+          className="form-input cursor-pointer text-sm text-navy-800 file:mr-4 file:rounded file:border-0 file:bg-navy-950 file:px-4 file:py-1.5 file:text-xs file:font-semibold file:uppercase file:tracking-wide file:text-cream-100 hover:file:bg-navy-800"
+        />
+        <p className="mt-1.5 text-xs text-navy-800/60">
+          Attach photos of your boat or the area needing work — helps Taylor provide an accurate quote.
+        </p>
       </Field>
 
       <button
@@ -125,7 +148,7 @@ export function ContactForm() {
         disabled={status === "submitting"}
         className="inline-flex w-full items-center justify-center rounded-sm bg-brass-500 px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-navy-950 transition-colors hover:bg-brass-400 disabled:opacity-60 sm:w-auto"
       >
-        {status === "submitting" ? "Sending…" : "Send Message"}
+        {status === "submitting" ? "Sending…" : "Send Quote Request"}
       </button>
     </form>
   );

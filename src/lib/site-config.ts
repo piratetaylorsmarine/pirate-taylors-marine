@@ -9,7 +9,7 @@
 export const business = {
   name: "Pirate Taylor's Marine",
   shortName: "Pirate Taylor's",
-  tagline: "Marine Carpentry & Refinishing, Done Right",
+  tagline: "Marine Carpentry, Brightwork & Painting",
   domain: "piratetaylorsmarine.com",
 
   phoneDisplay: "(714) 329-9718",
@@ -72,7 +72,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "brightwork-varnishing",
-    name: "Teak & Brightwork",
+    name: "Brightwork & Varnishing",
     short: "Teak restoration, varnish, and brightwork refinishing.",
     description:
       "From weathered, gray teak to a glass-smooth, deep-gloss finish — teak is stripped, sanded, and rebuilt with varnish or oil systems that hold up to the Southern California sun and salt.",
@@ -85,7 +85,7 @@ export const services: Service[] = [
   },
   {
     slug: "marine-carpentry",
-    name: "Custom Woodwork & Carpentry",
+    name: "Marine Carpentry",
     short: "Companionway doors, cockpit grates, and custom builds.",
     description:
       "One-off custom pieces built to marine standards — from companionway doors and cockpit floor grates to interior cabinetry and exterior woodworking. Every piece is built to fit, seal, and last aboard.",
@@ -94,19 +94,6 @@ export const services: Service[] = [
       "Custom cockpit floor grates",
       "Interior & exterior custom woodworking",
       "Hardware & cabinetry upgrades",
-    ],
-  },
-  {
-    slug: "repairs-restoration",
-    name: "Repairs & Restoration",
-    short: "Wood rot repair, handyman work, and window replacements.",
-    description:
-      "Whether it's a small repair or a larger restoration project, every job gets done right. Wood rot addressed properly, polycarbonate windows swapped cleanly, and general boat handyman work handled with care.",
-    bullets: [
-      "Wood rot repair & replacement",
-      "Polycarbonate window replacements",
-      "General boat handyman services",
-      "Stainless & brass polishing",
     ],
   },
   {
@@ -123,16 +110,55 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "repairs-restoration",
+    name: "Restoration & Repairs",
+    short: "Wood rot repair, handyman work, and window replacements.",
+    description:
+      "Whether it's a small repair or a larger restoration project, every job gets done right — wood rot addressed properly, polycarbonate windows replaced cleanly, and general handyman work handled with care.",
+    bullets: [
+      "Wood rot repair & replacement",
+      "Polycarbonate window replacements",
+      "General boat handyman services",
+      "Cosmetic restoration",
+    ],
+  },
+  {
+    slug: "marine-electrical",
+    name: "Marine Electrical",
+    short: "Wiring, panel upgrades, and electrical installs.",
+    description:
+      "Electrical work done cleanly and safely — from tracking down a short to full wiring upgrades, panel installs, and new accessories wired in properly.",
+    bullets: [
+      "Wiring & rewiring",
+      "Panel & breaker upgrades",
+      "Electronics & accessory installs",
+      "Troubleshooting & repair",
+    ],
+  },
+  {
+    slug: "polishing-detailing",
+    name: "Polishing & Detailing",
+    short: "Stainless and brass polishing.",
+    description:
+      "Bringing stainless steel and brass fittings back to a mirror finish — rails, cleats, winches, portlights, and any other hardware that has gone dull from salt and sun.",
+    bullets: [
+      "Stainless steel polishing",
+      "Brass polishing & restoration",
+      "Hardware detailing",
+      "Salt & oxidation removal",
+    ],
+  },
+  {
     slug: "systems-upgrades",
     name: "Systems & Upgrades",
-    short: "Solar, electrical, and onboard system installs.",
+    short: "Solar, compost toilets, and onboard upgrades.",
     description:
-      "Practical upgrades that make life aboard easier and more efficient — solar system installs, electrical and hardware upgrades, and even custom compost toilet installations.",
+      "Practical upgrades that make life aboard easier and more self-sufficient — solar system installs, custom compost toilets, and a wide range of hardware and system improvements.",
     bullets: [
       "Solar system installation",
-      "Electrical upgrades & wiring",
       "Custom compost toilet installation",
-      "Hardware & accessory installs",
+      "Hardware & system upgrades",
+      "General handyman & miscellaneous work",
     ],
   },
 ];
