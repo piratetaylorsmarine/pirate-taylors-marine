@@ -174,9 +174,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full antialiased">
       <head>
-        {/* Favicon — favicon.ico is the only thing Safari reliably picks up */}
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        {/* Favicon — versioned URL forces Safari cache bust */}
+        <link rel="shortcut icon" href="/favicon.ico?v=3" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Chula Vista, California" />
