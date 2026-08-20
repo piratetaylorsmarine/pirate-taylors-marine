@@ -174,6 +174,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full antialiased">
       <head>
+        {/* Favicon — explicit tags required for Safari */}
+        <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/apple-touch-icon.png" />
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Chula Vista, California" />
         <meta name="geo.position" content="32.6235;-117.0967" />

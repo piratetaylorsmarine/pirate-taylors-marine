@@ -21,17 +21,21 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-teak-200 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-teak-200 bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
 
       {/* Row 1 — logo centred, hamburger on mobile */}
-      <Container className="flex items-center justify-between py-1 lg:justify-center">
+      <Container className="flex items-center justify-between lg:justify-center" style={{ lineHeight: 0 }}>
         <Link
           href="/"
           className="flex items-center"
           onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.jpg" alt={business.name} className="block h-28 w-auto" />
+          <img
+            src="/logo.jpg"
+            alt={business.name}
+            style={{ display: 'block', height: '112px', width: 'auto', background: 'white' }}
+          />
         </Link>
 
         {/* Hamburger — mobile only */}
