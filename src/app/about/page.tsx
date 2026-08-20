@@ -98,6 +98,14 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-2 space-y-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/taylor-portrait.jpg"
+              alt="Taylor at the helm of a classic wooden boat"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "4/5" }}
+            />
+
             <div className="rounded-sm border border-teak-200 bg-cream-100 p-8">
               <h3 className="font-display text-xl text-navy-950">
                 Where I Work

@@ -198,6 +198,10 @@ export default function Home() {
             <img src="/projects/Screenshot_20260819_181133_Photos.jpg" alt="Teak cockpit and wooden helm wheel under blue sky" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/projects/Screenshot_20260819_181216_Photos.jpg" alt="Freshly varnished teak companionway hatch" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/20250822_132236.jpg" alt="Glossy varnished teak bow rail and ship's wheel against blue sky" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/20250822_132447.jpg" alt="Restored ship's wheel and teak deck at the marina" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
           </div>
         </Container>
       </section>
