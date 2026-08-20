@@ -24,10 +24,10 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-teak-200 bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
 
       {/* Row 1 — logo centred, hamburger on mobile */}
-      <Container className="flex items-center justify-between lg:justify-center" style={{ lineHeight: 0 }}>
+      <Container className="flex items-center justify-between lg:justify-center">
         <Link
           href="/"
-          className="flex items-center"
+          className="flex items-center leading-none"
           onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
