@@ -1,39 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Background -->
+  <!-- Dark background -->
   <rect width="64" height="64" rx="8" fill="#131008"/>
 
-  <!-- Crossbones left -->
-  <line x1="10" y1="52" x2="24" y2="38" stroke="#f0e8d2" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="9" cy="53" r="3.5" fill="#f0e8d2"/>
-  <circle cx="25" cy="37" r="3.5" fill="#f0e8d2"/>
+  <!-- Crossbones behind skull -->
+  <line x1="8" y1="56" x2="56" y2="8" stroke="#f0e8d2" stroke-width="6" stroke-linecap="round"/>
+  <line x1="56" y1="56" x2="8" y2="8" stroke="#f0e8d2" stroke-width="6" stroke-linecap="round"/>
+  <!-- Bone end knobs -->
+  <circle cx="8"  cy="8"  r="5" fill="#f0e8d2"/>
+  <circle cx="56" cy="8"  r="5" fill="#f0e8d2"/>
+  <circle cx="8"  cy="56" r="5" fill="#f0e8d2"/>
+  <circle cx="56" cy="56" r="5" fill="#f0e8d2"/>
 
-  <!-- Crossbones right -->
-  <line x1="54" y1="52" x2="40" y2="38" stroke="#f0e8d2" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="55" cy="53" r="3.5" fill="#f0e8d2"/>
-  <circle cx="39" cy="37" r="3.5" fill="#f0e8d2"/>
-
-  <!-- Skull -->
-  <ellipse cx="32" cy="29" rx="14" ry="13" fill="#f0e8d2"/>
-
+  <!-- Skull dome -->
+  <ellipse cx="32" cy="28" rx="16" ry="15" fill="#f0e8d2"/>
   <!-- Jaw -->
-  <path d="M19 34 Q19 44 32 45 Q45 44 45 34 Z" fill="#f0e8d2"/>
+  <rect x="22" y="37" width="20" height="9" rx="3" fill="#f0e8d2"/>
 
   <!-- Eyes -->
-  <ellipse cx="26.5" cy="28" rx="3.8" ry="4.2" fill="#131008"/>
-  <ellipse cx="37.5" cy="28" rx="3.8" ry="4.2" fill="#131008"/>
+  <ellipse cx="26" cy="27" rx="4.5" ry="5" fill="#131008"/>
+  <ellipse cx="38" cy="27" rx="4.5" ry="5" fill="#131008"/>
 
-  <!-- Teeth -->
-  <rect x="25" y="38" width="14" height="4.5" rx="1" fill="#f0e8d2"/>
-  <line x1="29" y1="38" x2="29" y2="42.5" stroke="#131008" stroke-width="1.2"/>
-  <line x1="32" y1="38" x2="32" y2="42.5" stroke="#131008" stroke-width="1.2"/>
-  <line x1="35" y1="38" x2="35" y2="42.5" stroke="#131008" stroke-width="1.2"/>
+  <!-- Nose -->
+  <path d="M30 33 L32 36 L34 33 Z" fill="#131008"/>
 
-  <!-- Pirate hat brim -->
-  <rect x="12" y="19" width="40" height="5" rx="2.5" fill="#2e210e"/>
+  <!-- Teeth gaps -->
+  <line x1="27" y1="37" x2="27" y2="46" stroke="#131008" stroke-width="2"/>
+  <line x1="32" y1="37" x2="32" y2="46" stroke="#131008" stroke-width="2"/>
+  <line x1="37" y1="37" x2="37" y2="46" stroke="#131008" stroke-width="2"/>
 
-  <!-- Hat body -->
-  <path d="M15 20 Q16 8 32 7 Q48 8 49 20 Z" fill="#1c1508"/>
-
-  <!-- Hat band red -->
-  <rect x="13" y="19.5" width="38" height="3.5" rx="1.5" fill="#c02020"/>
+  <!-- Red bandana strip across skull -->
+  <rect x="16" y="22" width="32" height="5" rx="2" fill="#c02020"/>
 </svg>
