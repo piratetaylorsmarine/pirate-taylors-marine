@@ -21,10 +21,22 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-teak-200 bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
+    <header className="sticky top-0 z-50 border-b-2 border-brass-400/50 bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
 
-      {/* Row 1 — logo centred, hamburger on mobile */}
+      {/* Row 1 — hamburger left on mobile, logo centred on desktop */}
       <Container className="flex items-center justify-between lg:justify-center">
+
+        {/* Hamburger — mobile only, sits LEFT */}
+        <button
+          type="button"
+          className="text-navy-800 lg:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <CloseIcon className="h-7 w-7" /> : <MenuIcon className="h-7 w-7" />}
+        </button>
+
+        {/* Logo — right on mobile, centred on desktop */}
         <Link
           href="/"
           className="flex items-center leading-none"
@@ -37,20 +49,10 @@ export function Header() {
             style={{ display: 'block', height: '112px', width: 'auto', background: 'white' }}
           />
         </Link>
-
-        {/* Hamburger — mobile only */}
-        <button
-          type="button"
-          className="text-navy-800 lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <CloseIcon className="h-7 w-7" /> : <MenuIcon className="h-7 w-7" />}
-        </button>
       </Container>
 
       {/* Row 2 — nav bar, desktop only */}
-      <div className="hidden border-t border-teak-100 lg:block">
+      <div className="hidden border-t border-brass-400/30 lg:block">
         <Container className="flex items-center justify-between py-2.5">
           <nav className="flex items-center gap-8">
             {links.map((link) => {

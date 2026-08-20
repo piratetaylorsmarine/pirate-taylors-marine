@@ -59,18 +59,30 @@ const whyUs = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="wave-texture relative overflow-hidden bg-navy-950 text-cream-100">
-        <Container className="relative grid grid-cols-1 items-center gap-12 py-24 sm:py-32 lg:grid-cols-2">
-          <div className="flex flex-col items-start gap-8">
-            <span className="flex items-center gap-2 rounded-full border border-crimson-500/50 bg-crimson-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-crimson-400">
+      {/* Hero — full-bleed photo */}
+      <section className="relative flex min-h-[88vh] items-end overflow-hidden bg-navy-950 text-cream-100">
+        {/* Background photo */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/projects/unnamed.webp"
+          alt="Classic wooden sailboat teak cockpit restoration"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* Gradient overlay — dark at bottom for text, lighter at top */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/10" />
+        {/* Brass top accent line */}
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-brass-400/70 to-transparent" />
+
+        <Container className="relative pb-16 pt-64 sm:pt-80">
+          <div className="flex flex-col items-start gap-6 max-w-2xl">
+            <span className="flex items-center gap-2 rounded-full border border-brass-400/60 bg-navy-950/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-300 backdrop-blur-sm">
               <AnchorIcon className="h-3.5 w-3.5" />
-              {business.serviceArea}
+              Serving San Diego &amp; Southern California Marinas
             </span>
-            <h1 className="font-display max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl leading-tight text-cream-100 sm:text-5xl lg:text-6xl drop-shadow-lg">
               {business.tagline}
             </h1>
-            <p className="max-w-xl text-lg leading-relaxed text-cream-200/85">
+            <p className="max-w-xl text-lg leading-relaxed text-cream-200/90 drop-shadow">
               Custom marine carpentry, brightwork restoration, painting, and
               electrical work for boat owners across San Diego and Southern
               California. Built by hand, finished to last.
@@ -84,32 +96,23 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="hidden lg:block">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/projects/unnamed.webp"
-              alt="Classic wooden sailboat teak cockpit restoration — Pirate Taylor's Marine"
-              className="w-full rounded-sm object-cover shadow-2xl shadow-navy-950"
-              style={{ aspectRatio: "3/4", maxHeight: "560px" }}
-            />
-          </div>
         </Container>
       </section>
 
       {/* Trust strip */}
-      <section className="border-b border-teak-200 bg-cream-100">
-        <Container className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 py-6 text-sm font-medium text-navy-800 sm:justify-between">
+      <section className="border-y border-brass-400/30 bg-navy-950 text-cream-200">
+        <Container className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-4 text-xs font-semibold uppercase tracking-widest sm:justify-between">
           <span className="flex items-center gap-2">
-            <CheckIcon className="h-4 w-4 text-brass-500" /> Custom Marine Carpentry
+            <CheckIcon className="h-3.5 w-3.5 text-brass-400" /> Custom Marine Carpentry
           </span>
           <span className="flex items-center gap-2">
-            <CheckIcon className="h-4 w-4 text-brass-500" /> Serving All of Southern California
+            <CheckIcon className="h-3.5 w-3.5 text-brass-400" /> Serving Southern California
           </span>
           <span className="flex items-center gap-2">
-            <CheckIcon className="h-4 w-4 text-brass-500" /> Free Estimates
+            <CheckIcon className="h-3.5 w-3.5 text-brass-400" /> Free Estimates
           </span>
           <span className="flex items-center gap-2">
-            <CheckIcon className="h-4 w-4 text-brass-500" /> Boatyard & In-Water Service
+            <CheckIcon className="h-3.5 w-3.5 text-brass-400" /> Boatyard &amp; In-Water Service
           </span>
         </Container>
       </section>
@@ -157,10 +160,17 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Brass anchor divider */}
+      <div className="flex items-center gap-4 px-6 py-5 bg-cream-200">
+        <div className="flex-1 h-px bg-brass-400/40" />
+        <AnchorIcon className="h-5 w-5 text-brass-500 shrink-0" />
+        <div className="flex-1 h-px bg-brass-400/40" />
+      </div>
+
       {/* Recent Work photo showcase */}
-      <section className="py-20 bg-cream-300/40">
+      <section className="py-16 bg-cream-200">
         <Container>
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-8">
             <div>
               <h2 className="font-display text-3xl text-navy-950 sm:text-4xl">Recent Work</h2>
               <p className="mt-2 text-navy-800/75">A few shots from the water.</p>
@@ -169,41 +179,25 @@ export default function Home() {
               See All Projects →
             </Button>
           </div>
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/projects/Screenshot_20260819_181041_Photos.jpg"
-              alt="Classic sloop Footloose — teak brightwork restoration"
-              className="w-full rounded-sm object-cover"
-              style={{ aspectRatio: "3/4" }}
-            />
+            <img src="/projects/Screenshot_20260819_181041_Photos.jpg" alt="Classic sloop teak brightwork" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/projects/IMG_20260724_121040_159.webp"
-              alt="Custom hand-carved teak bowsprit scroll — Pirate Taylor's Marine"
-              className="w-full rounded-sm object-cover"
-              style={{ aspectRatio: "3/4" }}
-            />
+            <img src="/projects/IMG_20260724_121040_159.webp" alt="Custom carved teak bowsprit scroll" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/projects/IMG_20260623_170639_259.webp"
-              alt="Fresh nonskid deck paint — cruising sailboat"
-              className="w-full rounded-sm object-cover"
-              style={{ aspectRatio: "3/4" }}
-            />
+            <img src="/projects/unnamed(1).webp" alt="Classic sailboat teak cockpit and helm" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/projects/Screenshot_20260819_180554_Photos.jpg"
-              alt="Classic wooden sailboat full teak cockpit restoration"
-              className="w-full rounded-sm object-cover"
-              style={{ aspectRatio: "3/4" }}
-            />
+            <img src="/projects/IMG_20260623_170639_259.webp" alt="Fresh nonskid deck paint" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/Screenshot_20260819_180554_Photos.jpg" alt="Full teak cockpit restoration" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/IMG_20260724_121110_177.webp" alt="Grand Banks trawler teak rubrail" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
           </div>
         </Container>
       </section>
 
       {/* Why us */}
-      <section className="bg-teak-700 py-24 text-cream-100">
+      <section className="bg-teak-700 py-24 text-cream-100 border-t-2 border-brass-400/40">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-3xl sm:text-4xl">
@@ -316,7 +310,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="wave-texture bg-navy-950 py-20 text-cream-100">
+      <section className="wave-texture bg-navy-950 py-20 text-cream-100 border-t-2 border-brass-400/40">
         <Container className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-display max-w-xl text-3xl sm:text-4xl">
             Ready to restore, build, or refit? Let&rsquo;s talk about your boat.
