@@ -24,7 +24,7 @@ export function Header() {
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.jpg" alt={business.name} className="h-14 w-14 rounded-full object-cover" />
+          <img src="/logo.jpg" alt={business.name} className="h-12 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
