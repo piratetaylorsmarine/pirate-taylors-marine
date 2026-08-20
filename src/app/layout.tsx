@@ -36,14 +36,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Pirate Taylor's Marine", url: "https://piratetaylorsmarine.com" }],
   creator: "Pirate Taylor's Marine",
-  icons: {
-    icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon.ico",
-  },
   robots: {
     index: true,
     follow: true,
@@ -174,10 +166,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full antialiased">
       <head>
-        {/* Favicon — versioned URL forces Safari cache bust */}
-        <link rel="shortcut icon" href="/favicon.ico?v=3" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Chula Vista, California" />
         <meta name="geo.position" content="32.6235;-117.0967" />
