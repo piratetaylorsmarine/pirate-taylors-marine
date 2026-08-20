@@ -12,6 +12,7 @@ const links = [
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Get a Quote" },
 ];
 
@@ -22,7 +23,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-teak-200 bg-white/95 backdrop-blur shadow-sm">
       <Container className="flex h-24 items-center justify-between">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          className="flex items-center"
+          onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.jpg" alt={business.name} className="h-20 w-auto object-contain" />
         </Link>
