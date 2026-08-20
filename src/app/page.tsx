@@ -340,11 +340,11 @@ export default function Home() {
                 },
                 {
                   q: "Can I get a quote from photos?",
-                  a: "Yes. Send photos through the contact form and I can give you a solid estimate. For larger jobs I'll usually want to come take a look in person, but photos get us most of the way there.",
+                  a: `Yes. Email photos to ${business.email} (or text ${business.phoneDisplay}) and I can give you a solid estimate. For larger jobs I'll usually want to come take a look in person, but photos get us most of the way there.`,
                 },
                 {
                   q: "How much does teak restoration cost?",
-                  a: "It varies by the size of the boat, condition of the wood, and how many coats you want. A small brightwork refresh might run a few hundred dollars; a full restoration on a larger boat can be several thousand. Best way to find out is to send photos — I'll give you a clear number before anything starts.",
+                  a: `It varies by the size of the boat, condition of the wood, and how many coats you want. A small brightwork refresh might run a few hundred dollars; a full restoration on a larger boat can be several thousand. Best way to find out is to email photos to ${business.email} — I'll give you a clear number before anything starts.`,
                 },
                 {
                   q: "Do you work on fiberglass boats?",

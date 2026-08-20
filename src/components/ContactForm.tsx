@@ -1,30 +1,36 @@
 "use client";
 
 import { FormEvent, ReactNode, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { business, services } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("submitting");
 
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error("EmailJS is not configured — missing NEXT_PUBLIC_EMAILJS_* env vars");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("submitting");
     const form = e.currentTarget;
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        body: new FormData(form),
-      });
-
-      if (!res.ok) throw new Error("Failed to send");
-
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, { publicKey: PUBLIC_KEY });
       setStatus("success");
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error("EmailJS error:", err);
       setStatus("error");
     }
   }
@@ -138,20 +144,13 @@ export function ContactForm() {
         />
       </Field>
 
-      {/* Photo Upload */}
-      <Field label="Photos (optional)" htmlFor="photos">
-        <input
-          id="photos"
-          name="photos"
-          type="file"
-          multiple
-          accept="image/*"
-          className="form-input cursor-pointer text-sm text-navy-800 file:mr-4 file:rounded file:border-0 file:bg-navy-950 file:px-4 file:py-1.5 file:text-xs file:font-semibold file:uppercase file:tracking-wide file:text-cream-100 hover:file:bg-navy-800"
-        />
-        <p className="mt-1.5 text-xs text-navy-800/60">
-          Attach photos of your boat or the area needing work — helps Taylor provide an accurate quote.
-        </p>
-      </Field>
+      <p className="text-xs text-navy-800/60">
+        Have photos of your boat or the area needing work? Email them to{" "}
+        <a href={`mailto:${business.email}`} className="font-medium text-teak-600 hover:text-teak-500">
+          {business.email}
+        </a>{" "}
+        or text {business.phoneDisplay} — it helps Taylor give a more accurate quote.
+      </p>
 
       {status === "error" && (
         <p className="text-sm font-medium text-crimson-600">

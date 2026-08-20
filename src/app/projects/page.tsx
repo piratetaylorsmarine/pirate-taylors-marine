@@ -185,8 +185,8 @@ export default function ProjectsPage() {
             Have a project in mind?
           </h2>
           <p className="max-w-lg text-cream-200/80">
-            Send photos of your boat and describe what needs doing — Taylor will
-            get back to you with a free estimate.
+            Describe what needs doing and Taylor will get back to you with a
+            free estimate.
           </p>
           <Button href="/contact" variant="primary">Get a Free Quote</Button>
         </Container>

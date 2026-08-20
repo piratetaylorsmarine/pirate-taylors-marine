@@ -1,0 +1,98 @@
+<!--
+  Paste this into dashboard.emailjs.com → Email Templates → your template →
+  the "Content" HTML editor (switch to code/HTML view, not the visual block
+  editor, then paste this whole thing in and save).
+
+  Variables ({{name}}, {{phone}}, etc.) map directly to the `name="..."`
+  attributes on the fields in ContactForm.tsx — don't rename one without
+  the other.
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0e8d2; padding:32px 16px; font-family:Arial,Helvetica,sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background-color:#ffffff; border-radius:4px; overflow:hidden;">
+
+        <!-- Header -->
+        <tr>
+          <td style="background-color:#131008; padding:28px 32px; border-bottom:3px solid #c69430;">
+            <div style="font-family:Georgia,'Times New Roman',serif; font-size:22px; color:#f8f0dc; font-weight:bold;">
+              Pirate Taylor&rsquo;s Marine
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#d9ac54; margin-top:4px;">
+              New Quote Request
+            </div>
+          </td>
+        </tr>
+
+        <!-- Intro -->
+        <tr>
+          <td style="padding:28px 32px 8px 32px;">
+            <p style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:18px; color:#131008;">
+              New message from the website contact form
+            </p>
+          </td>
+        </tr>
+
+        <!-- Details table -->
+        <tr>
+          <td style="padding:8px 32px 24px 32px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; margin-top:12px;">
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; width:140px; vertical-align:top;">Name</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">{{name}}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; vertical-align:top;">Phone</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">
+                  <a href="tel:{{phone}}" style="color:#131008; text-decoration:none;">{{phone}}</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; vertical-align:top;">Email</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">
+                  <a href="mailto:{{email}}" style="color:#c02020; text-decoration:none;">{{email}}</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; vertical-align:top;">Boat</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">{{boat}}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; vertical-align:top;">Boat Length</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">{{boat_size}}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; vertical-align:top;">Location</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">{{location}}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c; vertical-align:top;">Service Needed</td>
+                <td style="padding:10px 0; border-bottom:1px solid #e3caa8; font-size:14px; color:#131008; vertical-align:top;">
+                  <span style="display:inline-block; background-color:#c69430; color:#131008; font-size:12px; font-weight:bold; text-transform:uppercase; letter-spacing:0.5px; padding:3px 10px; border-radius:2px;">{{service}}</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Message -->
+        <tr>
+          <td style="padding:0 32px 28px 32px;">
+            <p style="margin:0 0 8px 0; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:#7a4f2c;">Message</p>
+            <div style="background-color:#f8f0dc; border-left:3px solid #c69430; padding:14px 16px; font-size:14px; line-height:1.6; color:#131008; white-space:pre-wrap;">{{message}}</div>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color:#f0e8d2; padding:18px 32px; border-top:1px solid #e3caa8;">
+            <p style="margin:0; font-size:12px; color:#5c4220;">
+              Sent from the contact form at piratetaylorsmarine.com — reply to this email to respond directly to {{name}}.
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>

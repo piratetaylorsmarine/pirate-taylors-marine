@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     q: "Can I get a quote without you seeing the boat in person?",
-    a: "Absolutely. Send photos of the area needing work through the contact form and I can give you a solid ballpark. For larger or more complex jobs I'll usually want to come take a look in person before giving a final number, but photos get us most of the way there.",
+    a: `Absolutely. Email photos of the area needing work to ${business.email} (or text ${business.phoneDisplay}) and I can give you a solid ballpark. For larger or more complex jobs I'll usually want to come take a look in person before giving a final number, but photos get us most of the way there.`,
   },
   {
     q: "How much does teak restoration cost?",
-    a: "It varies a lot depending on the size of the boat, the condition of the wood, and how many coats you want. A small brightwork refresh can run a few hundred dollars; a full teak restoration on a larger boat can be several thousand. The best way to find out is to send photos and get a free estimate — I'll give you a clear price before anything starts.",
+    a: `It varies a lot depending on the size of the boat, the condition of the wood, and how many coats you want. A small brightwork refresh can run a few hundred dollars; a full teak restoration on a larger boat can be several thousand. The best way to find out is to email photos to ${business.email} and get a free estimate — I'll give you a clear price before anything starts.`,
   },
   {
     q: "How long does brightwork or varnish work take?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Send me a message through the contact form with some photos and a description of what you need. I'll get back to you quickly with questions or a quote. No pressure, no commitment — just a free conversation about your boat.",
+    a: "Send me a message through the contact form with a description of what you need (and email or text over photos if you have them). I'll get back to you quickly with questions or a quote. No pressure, no commitment — just a free conversation about your boat.",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function FaqPage() {
             Ready to get started?
           </h2>
           <p className="max-w-lg text-cream-200/80">
-            Send photos of your boat and describe what needs doing — Taylor will get back to you with a free estimate.
+            Describe what needs doing and Taylor will get back to you with a free estimate.
           </p>
           <Button href="/contact" variant="primary">Get a Free Quote</Button>
         </Container>
