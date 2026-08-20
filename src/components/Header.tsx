@@ -23,8 +23,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-brass-400/50 bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
 
-      {/* Single row — logo left, nav centred, phone/CTA right (desktop). Hamburger + logo only on mobile. */}
-      <Container className="flex items-center justify-between gap-4 py-2 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:py-0">
+      {/* Row 1 — hamburger left on mobile, logo centred on desktop */}
+      <Container className="flex items-center justify-between lg:justify-center">
 
         {/* Hamburger — mobile only, sits LEFT */}
         <button
@@ -36,7 +36,7 @@ export function Header() {
           {open ? <CloseIcon className="h-7 w-7" /> : <MenuIcon className="h-7 w-7" />}
         </button>
 
-        {/* Logo */}
+        {/* Logo — right on mobile, centred on desktop */}
         <Link
           href="/"
           className="flex items-center leading-none"
@@ -46,45 +46,47 @@ export function Header() {
           <img
             src="/logo.jpg"
             alt={business.name}
-            style={{ display: 'block', height: '76px', width: 'auto', background: 'white' }}
+            style={{ display: 'block', height: '96px', width: 'auto', background: 'white' }}
           />
         </Link>
-
-        {/* Nav — centred, desktop only */}
-        <nav className="hidden items-center justify-center gap-7 lg:flex">
-          {links.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
-                  active ? "text-crimson-500" : "text-navy-800 hover:text-crimson-500"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* Phone + CTA — right, desktop only */}
-        <div className="hidden items-center justify-end gap-4 lg:flex">
-          <a
-            href={`tel:${business.phoneTel}`}
-            className="flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-crimson-500"
-          >
-            <PhoneIcon className="h-4 w-4" />
-            {business.phoneDisplay}
-          </a>
-          <Link
-            href="/contact"
-            className="rounded-sm bg-crimson-500 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-crimson-600"
-          >
-            Get a Quote
-          </Link>
-        </div>
       </Container>
+
+      {/* Row 2 — nav bar, desktop only */}
+      <div className="hidden border-t border-brass-400/30 lg:block">
+        <Container className="flex items-center justify-between py-2.5">
+          <nav className="flex items-center gap-8">
+            {links.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                    active ? "text-crimson-500" : "text-navy-800 hover:text-crimson-500"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <div className="flex items-center gap-4">
+            <a
+              href={`tel:${business.phoneTel}`}
+              className="flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-crimson-500"
+            >
+              <PhoneIcon className="h-4 w-4" />
+              {business.phoneDisplay}
+            </a>
+            <Link
+              href="/contact"
+              className="rounded-sm bg-crimson-500 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-crimson-600"
+            >
+              Get a Quote
+            </Link>
+          </div>
+        </Container>
+      </div>
 
       {/* Mobile menu */}
       {open && (

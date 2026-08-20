@@ -59,42 +59,39 @@ const whyUs = [
 export default function Home() {
   return (
     <>
-      {/* Hero — full-bleed photo */}
-      <section className="relative flex min-h-[88vh] items-end overflow-hidden bg-navy-950 text-cream-100">
-        {/* Background photo */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/projects/unnamed.webp"
-          alt="Classic wooden sailboat teak cockpit restoration"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        {/* Gradient overlay — dark at bottom for text, lighter at top */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/10" />
-        {/* Brass top accent line */}
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-brass-400/70 to-transparent" />
-
-        <Container className="relative pb-16 pt-64 sm:pt-80">
-          <div className="flex flex-col items-start gap-6 max-w-2xl">
-            <span className="flex items-center gap-2 rounded-full border border-brass-400/60 bg-navy-950/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-300 backdrop-blur-sm">
-              <AnchorIcon className="h-3.5 w-3.5" />
-              Serving San Diego &amp; Southern California Marinas
-            </span>
-            <h1 className="font-display text-4xl leading-tight text-cream-100 sm:text-5xl lg:text-6xl drop-shadow-lg">
-              {business.tagline}
-            </h1>
-            <div className="h-px w-24 bg-brass-400/70" />
-            <p className="max-w-xl text-lg leading-relaxed text-cream-200/90 drop-shadow">
-              Custom marine carpentry, brightwork restoration, painting, and
-              electrical work for boat owners across San Diego and Southern
-              California. Built by hand, finished to last.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button href="/contact" variant="primary">
-                Get a Free Quote
-              </Button>
-              <Button href="/projects" variant="secondary">
-                View Our Work
-              </Button>
+      {/* Hero — photo with overlapping card */}
+      <section className="overflow-hidden bg-cream-200 pt-10 pb-20 sm:pt-14 sm:pb-24">
+        <Container>
+          <div className="relative lg:pl-14">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/unnamed.webp"
+              alt="Classic wooden sailboat teak cockpit restoration at a marina lined with palm trees"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "16/9" }}
+            />
+            <div className="relative -mt-10 mx-4 rounded-sm bg-navy-950 p-8 text-cream-100 shadow-xl sm:p-10 lg:absolute lg:left-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[28rem] lg:-translate-y-1/2">
+              <span className="flex w-fit items-center gap-2 rounded-full border border-brass-400/60 bg-navy-950/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-300">
+                <AnchorIcon className="h-3.5 w-3.5" />
+                Serving San Diego &amp; Southern California Marinas
+              </span>
+              <h1 className="font-display mt-4 text-3xl leading-tight sm:text-4xl">
+                {business.tagline}
+              </h1>
+              <div className="mt-4 h-px w-24 bg-brass-400/70" />
+              <p className="mt-4 text-sm leading-relaxed text-cream-200/85">
+                Custom marine carpentry, brightwork restoration, painting, and
+                electrical work for boat owners across San Diego and Southern
+                California. Built by hand, finished to last.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Button href="/contact" variant="primary">
+                  Get a Free Quote
+                </Button>
+                <Button href="/projects" variant="secondary">
+                  View Our Work
+                </Button>
+              </div>
             </div>
           </div>
         </Container>
@@ -121,7 +118,7 @@ export default function Home() {
       {/* Meet the Craftsman — photo with overlapping card */}
       <section className="overflow-hidden bg-cream-200 py-20 sm:py-24">
         <Container>
-          <div className="relative lg:pl-14">
+          <div className="relative lg:pr-14">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/projects/20250822_132236.jpg"
@@ -129,7 +126,7 @@ export default function Home() {
               className="w-full rounded-sm object-cover"
               style={{ aspectRatio: "16/9" }}
             />
-            <div className="relative -mt-10 mx-4 rounded-sm bg-navy-950 p-8 text-cream-100 shadow-xl sm:p-10 lg:absolute lg:left-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[26rem] lg:-translate-y-1/2">
+            <div className="relative -mt-10 mx-4 rounded-sm bg-navy-950 p-8 text-cream-100 shadow-xl sm:p-10 lg:absolute lg:right-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[26rem] lg:-translate-y-1/2">
               <span className="text-xs font-semibold uppercase tracking-widest text-brass-400">
                 Meet the Craftsman
               </span>
