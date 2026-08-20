@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f1e7;
-  --foreground: #10203a;
+  --background: #f0e8d2;
+  --foreground: #131008;
 }
 
 @theme inline {
-  --color-navy-950: #081428;
-  --color-navy-900: #0c1f3b;
-  --color-navy-800: #122c52;
-  --color-navy-700: #1a3d6e;
-  --color-navy-600: #26538f;
+  /* Warm charcoal — pulled from the logo's near-black background */
+  --color-navy-950: #131008;
+  --color-navy-900: #1d1609;
+  --color-navy-800: #2e210e;
+  --color-navy-700: #422f14;
+  --color-navy-600: #5c4220;
 
   --color-teak-700: #5c3c22;
   --color-teak-600: #7a4f2c;
@@ -18,13 +19,20 @@
   --color-teak-300: #c99b6c;
   --color-teak-200: #e3caa8;
 
+  /* Brass/gold — matches the logo's banner scroll and lettering highlights */
   --color-brass-500: #c69430;
   --color-brass-400: #d9ac54;
   --color-brass-300: #e7c682;
 
-  --color-cream-100: #fbf8f1;
-  --color-cream-200: #f6f1e7;
-  --color-cream-300: #ece1cc;
+  /* Parchment cream — matches the logo's lettering */
+  --color-cream-100: #f8f0dc;
+  --color-cream-200: #f0e8d2;
+  --color-cream-300: #e2d4b0;
+
+  /* Crimson red — pulled from the logo's pirate bandana */
+  --color-crimson-600: #a01818;
+  --color-crimson-500: #c02020;
+  --color-crimson-400: #d43838;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -59,12 +67,10 @@ body {
   border-color: var(--color-brass-500);
 }
 
-/* Subtle wave texture used behind hero / CTA sections */
+/* Subtle texture used behind hero / CTA sections — warm charcoal with brass & crimson glows */
 .wave-texture {
-  background-image: radial-gradient(
-      circle at 20% 20%,
-      rgba(198, 148, 48, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(circle at 80% 60%, rgba(198, 148, 48, 0.06), transparent 45%);
+  background-image:
+    radial-gradient(ellipse at 10% 15%, rgba(192, 32, 32, 0.10), transparent 38%),
+    radial-gradient(ellipse at 85% 70%, rgba(198, 148, 48, 0.10), transparent 42%),
+    radial-gradient(ellipse at 50% 100%, rgba(198, 148, 48, 0.05), transparent 55%);
 }

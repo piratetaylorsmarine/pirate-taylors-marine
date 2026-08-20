@@ -63,7 +63,7 @@ export default function Home() {
       <section className="wave-texture relative overflow-hidden bg-navy-950 text-cream-100">
         <Container className="relative grid grid-cols-1 items-center gap-12 py-24 sm:py-32 lg:grid-cols-2">
           <div className="flex flex-col items-start gap-8">
-            <span className="flex items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-400">
+            <span className="flex items-center gap-2 rounded-full border border-crimson-500/50 bg-crimson-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-crimson-400">
               <AnchorIcon className="h-3.5 w-3.5" />
               {business.serviceArea}
             </span>
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* Recent Work photo showcase */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-cream-300/40">
         <Container>
           <div className="flex items-end justify-between mb-10">
             <div>

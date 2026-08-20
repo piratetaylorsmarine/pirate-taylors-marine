@@ -37,7 +37,7 @@ export default function AboutPage() {
     <>
       <section className="wave-texture bg-navy-950 py-20 text-cream-100">
         <Container>
-          <span className="flex w-fit items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-400">
+          <span className="flex w-fit items-center gap-2 rounded-full border border-crimson-500/50 bg-crimson-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-crimson-400">
             <AnchorIcon className="h-3.5 w-3.5" />
             About
           </span>

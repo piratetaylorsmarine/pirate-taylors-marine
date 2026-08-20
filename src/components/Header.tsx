@@ -35,7 +35,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium tracking-wide uppercase transition-colors ${
-                  active ? "text-brass-400" : "text-cream-200 hover:text-brass-400"
+                  active ? "text-crimson-400" : "text-cream-200 hover:text-crimson-400"
                 }`}
               >
                 {link.label}
@@ -47,14 +47,14 @@ export function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={`tel:${business.phoneTel}`}
-            className="flex items-center gap-2 text-sm font-semibold text-cream-100 hover:text-brass-400"
+            className="flex items-center gap-2 text-sm font-semibold text-cream-100 hover:text-crimson-400"
           >
             <PhoneIcon className="h-4 w-4" />
             {business.phoneDisplay}
           </a>
           <Link
             href="/contact"
-            className="rounded-sm bg-brass-500 px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-navy-950 transition-colors hover:bg-brass-400"
+            className="rounded-sm bg-crimson-500 px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-cream-100 transition-colors hover:bg-crimson-600"
           >
             Get a Quote
           </Link>
@@ -80,8 +80,8 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className={`rounded px-2 py-3 text-base font-medium uppercase tracking-wide ${
                   pathname === link.href
-                    ? "text-brass-400"
-                    : "text-cream-200 hover:text-brass-400"
+                    ? "text-crimson-400"
+                    : "text-cream-200 hover:text-crimson-400"
                 }`}
               >
                 {link.label}
