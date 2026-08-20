@@ -269,6 +269,52 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-3xl text-navy-950 sm:text-4xl">Common Questions</h2>
+            <p className="mt-3 text-navy-800/75">
+              Quick answers — full FAQ at{" "}
+              <a href="/faq" className="font-medium text-crimson-500 hover:text-crimson-600 underline underline-offset-2">piratetaylorsmarine.com/faq</a>.
+            </p>
+            <div className="faq-list mt-8">
+              {[
+                {
+                  q: "Do you come to my boat, or do I need to haul it?",
+                  a: "I come to you — marina, boatyard, or private dock. No hauling required.",
+                },
+                {
+                  q: "Can I get a quote from photos?",
+                  a: "Yes. Send photos through the contact form and I can give you a solid estimate. For larger jobs I'll usually want to come take a look in person, but photos get us most of the way there.",
+                },
+                {
+                  q: "How much does teak restoration cost?",
+                  a: "It varies by the size of the boat, condition of the wood, and how many coats you want. A small brightwork refresh might run a few hundred dollars; a full restoration on a larger boat can be several thousand. Best way to find out is to send photos — I'll give you a clear number before anything starts.",
+                },
+                {
+                  q: "Do you work on fiberglass boats?",
+                  a: "Yes. A lot of my work — painting, nonskid decks, wood rot repair, hardware and electrical — is done on fiberglass vessels.",
+                },
+                {
+                  q: "Are you insured?",
+                  a: "Yes, I carry liability insurance. Happy to provide proof before we start.",
+                },
+                {
+                  q: "What areas do you serve?",
+                  a: "Based in Chula Vista and working marinas across San Diego and Southern California — Coronado, National City, Oceanside, Dana Point, Newport Beach, and more.",
+                },
+              ].map((faq, i) => (
+                <details key={i} className="faq-item">
+                  <summary className="faq-question">{faq.q}</summary>
+                  <p className="faq-answer">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* CTA */}
       <section className="wave-texture bg-navy-950 py-20 text-cream-100">
         <Container className="flex flex-col items-center gap-6 text-center">

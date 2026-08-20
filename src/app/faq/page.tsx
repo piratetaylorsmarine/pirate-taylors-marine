@@ -104,15 +104,15 @@ export default function FaqPage() {
 
       <section className="py-20">
         <Container>
-          <div className="mx-auto max-w-3xl divide-y divide-teak-200">
-            {faqs.map((faq, i) => (
-              <div key={i} className="py-8 first:pt-0">
-                <h2 className="font-display text-lg text-navy-950 sm:text-xl">
-                  {faq.q}
-                </h2>
-                <p className="mt-3 leading-relaxed text-navy-800/80">{faq.a}</p>
-              </div>
-            ))}
+          <div className="mx-auto max-w-3xl">
+            <div className="faq-list">
+              {faqs.map((faq, i) => (
+                <details key={i} className="faq-item">
+                  <summary className="faq-question">{faq.q}</summary>
+                  <p className="faq-answer">{faq.a}</p>
+                </details>
+              ))}
+            </div>
           </div>
 
           <div className="mx-auto mt-14 max-w-3xl rounded-sm border border-teak-200 bg-white p-8 text-center">

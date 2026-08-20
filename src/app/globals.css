@@ -67,6 +67,42 @@ body {
   border-color: var(--color-brass-500);
 }
 
+/* FAQ accordion — matches ColoDrone pattern */
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+.faq-item { border-top: 1px solid var(--color-teak-200); }
+.faq-item:last-child { border-bottom: 1px solid var(--color-teak-200); }
+.faq-question {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: var(--color-navy-950);
+  user-select: none;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-crimson-500);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-item[open] .faq-question::after { transform: rotate(45deg); }
+.faq-answer {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--color-navy-800) 80%, transparent);
+  line-height: 1.8;
+  padding-bottom: 1.4rem;
+  margin: 0;
+  max-width: 740px;
+}
+
 /* Subtle texture used behind hero / CTA sections — warm charcoal with brass & crimson glows */
 .wave-texture {
   background-image:
