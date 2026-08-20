@@ -82,6 +82,7 @@ export default function Home() {
             <h1 className="font-display text-4xl leading-tight text-cream-100 sm:text-5xl lg:text-6xl drop-shadow-lg">
               {business.tagline}
             </h1>
+            <div className="h-px w-24 bg-brass-400/70" />
             <p className="max-w-xl text-lg leading-relaxed text-cream-200/90 drop-shadow">
               Custom marine carpentry, brightwork restoration, painting, and
               electrical work for boat owners across San Diego and Southern
@@ -114,6 +115,58 @@ export default function Home() {
           <span className="flex items-center gap-2">
             <CheckIcon className="h-3.5 w-3.5 text-brass-400" /> Boatyard &amp; In-Water Service
           </span>
+        </Container>
+      </section>
+
+      {/* Meet the Craftsman — photo with overlapping card */}
+      <section className="overflow-hidden bg-cream-200 py-20 sm:py-24">
+        <Container>
+          <div className="relative lg:pl-14">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/projects/20250822_132236.jpg"
+              alt="Looking up at glossy varnished teak rail and ship's wheel against blue sky"
+              className="w-full rounded-sm object-cover"
+              style={{ aspectRatio: "16/9" }}
+            />
+            <div className="relative -mt-10 mx-4 rounded-sm bg-navy-950 p-8 text-cream-100 shadow-xl sm:p-10 lg:absolute lg:left-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[26rem] lg:-translate-y-1/2">
+              <span className="text-xs font-semibold uppercase tracking-widest text-brass-400">
+                Meet the Craftsman
+              </span>
+              <h2 className="font-display mt-3 text-2xl sm:text-3xl">
+                10 years of carpentry. A passion for boats.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-cream-200/85">
+                Taylor is the craftsman behind every project — hands-on from
+                first sanding pass to final coat of varnish, working boatyards
+                and marinas across San Diego and Southern California.
+              </p>
+              <Button href="/about" variant="primary" className="mt-6">
+                Meet Taylor →
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Stats band */}
+      <section className="border-y border-brass-400/30 bg-navy-950 py-14 text-cream-100">
+        <Container>
+          <div className="grid grid-cols-2 gap-y-10 text-center sm:grid-cols-4">
+            {[
+              { stat: "10+", label: "Years of Experience" },
+              { stat: "5.0★", label: `${business.googleReviewCount} Google Reviews` },
+              { stat: "100%", label: "Marine-Grade Materials" },
+              { stat: "7", label: "Core Services Offered" },
+            ].map((v) => (
+              <div key={v.label}>
+                <p className="font-display text-3xl text-brass-400 sm:text-4xl">{v.stat}</p>
+                <p className="mt-2 text-xs uppercase tracking-widest text-cream-200/75 sm:text-sm">
+                  {v.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
 
