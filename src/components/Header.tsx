@@ -22,49 +22,19 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-teak-200 bg-white/95 backdrop-blur shadow-sm">
-      <Container className="flex h-32 items-center justify-between">
+
+      {/* Row 1 — logo centred, hamburger on mobile */}
+      <Container className="flex items-center justify-between py-3 lg:justify-center">
         <Link
           href="/"
           className="flex items-center"
           onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.jpg" alt={business.name} className="h-28 w-auto object-contain" />
+          <img src="/logo.jpg" alt={business.name} className="h-24 w-auto object-contain" />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {links.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
-                  active ? "text-crimson-500" : "text-navy-800 hover:text-crimson-500"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="hidden items-center gap-4 lg:flex">
-          <a
-            href={`tel:${business.phoneTel}`}
-            className="flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-crimson-500"
-          >
-            <PhoneIcon className="h-4 w-4" />
-            {business.phoneDisplay}
-          </a>
-          <Link
-            href="/contact"
-            className="rounded-sm bg-crimson-500 px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-crimson-600"
-          >
-            Get a Quote
-          </Link>
-        </div>
-
+        {/* Hamburger — mobile only */}
         <button
           type="button"
           className="text-navy-800 lg:hidden"
@@ -75,6 +45,44 @@ export function Header() {
         </button>
       </Container>
 
+      {/* Row 2 — nav bar, desktop only */}
+      <div className="hidden border-t border-teak-100 lg:block">
+        <Container className="flex items-center justify-between py-2.5">
+          <nav className="flex items-center gap-8">
+            {links.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                    active ? "text-crimson-500" : "text-navy-800 hover:text-crimson-500"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <div className="flex items-center gap-4">
+            <a
+              href={`tel:${business.phoneTel}`}
+              className="flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-crimson-500"
+            >
+              <PhoneIcon className="h-4 w-4" />
+              {business.phoneDisplay}
+            </a>
+            <Link
+              href="/contact"
+              className="rounded-sm bg-crimson-500 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-crimson-600"
+            >
+              Get a Quote
+            </Link>
+          </div>
+        </Container>
+      </div>
+
+      {/* Mobile menu */}
       {open && (
         <div className="border-t border-teak-200 bg-white lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
