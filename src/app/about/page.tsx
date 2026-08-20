@@ -7,7 +7,7 @@ import { business } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Pirate Taylor's Marine | Chula Vista & San Diego Marine Carpenter",
   description:
-    "Taylor Arroway is a local marine carpenter with over 10 years of experience serving boat owners across Southern California marinas. Based in San Diego, specializing in teak restoration, custom woodwork, painting, and more.",
+    "Taylor is the craftsman behind Pirate Taylor's Marine Carpentry — 10 years of experience in teak restoration, marine carpentry, wood rot repair, and custom woodworking for boat owners across San Diego and Southern California.",
   alternates: { canonical: "https://piratetaylorsmarine.com/about" },
   openGraph: {
     title: "About Pirate Taylor's Marine | Chula Vista & San Diego Marine Carpenter",
@@ -18,18 +18,14 @@ export const metadata: Metadata = {
 };
 
 const specialties = [
-  "Teak restoration and varnish work",
-  "Custom companionway doors",
-  "Custom cockpit floor grates",
+  "Teak & brightwork restoration",
+  "Marine carpentry",
+  "Exterior woodwork",
+  "Trim & rail repairs",
   "Wood rot repair",
-  "Stainless & brass polishing",
-  "Custom compost toilets",
-  "Topside paint and nonskid decks",
-  "Custom woodworking interior and exterior",
-  "General boat handyman services",
-  "Solar system installation",
-  "Hardware, cabinetry & electrical upgrades",
-  "Polycarbonate window replacements",
+  "Custom woodworking",
+  "Topside paint & nonskid decks",
+  "General boat improvements",
 ];
 
 export default function AboutPage() {
@@ -42,7 +38,7 @@ export default function AboutPage() {
             About
           </span>
           <h1 className="font-display mt-6 max-w-2xl text-4xl sm:text-5xl">
-            Local marine carpenter. 10+ years of experience. Fair winds guaranteed.
+            10 years of carpentry. A passion for boats. Every detail done right.
           </h1>
         </Container>
       </section>
@@ -55,22 +51,30 @@ export default function AboutPage() {
             </h2>
             <div className="mt-5 space-y-4 text-navy-800/85 leading-relaxed">
               <p>
-                My name is Taylor Arroway, owner of Pirate Taylor&rsquo;s Marine Services.
-                I&rsquo;m a local marine carpenter based in San Diego serving boat owners
-                throughout Southern California marinas with over 10 years of carpentry experience.
+                I&rsquo;m Taylor, the craftsman behind Pirate Taylor&rsquo;s Marine Carpentry.
+                With 10 years of carpentry experience and a passion for boats, woodworking, and
+                craftsmanship, I specialize in helping boat owners restore, repair, and improve
+                their vessels.
               </p>
               <p>
-                Whether your boat needs a small repair, a cosmetic refresh, or a larger
-                restoration project, I&rsquo;d be happy to help keep it looking and functioning
-                its best. I pride myself on high quality and budget friendly work.
+                My work includes teak and brightwork restoration, marine carpentry, exterior
+                woodwork, trim and rail repairs, wood rot repair, custom woodworking, and general
+                boat improvements.
               </p>
               <p>
-                I&rsquo;m working hard to grow my business and build up a solid project
-                schedule. If you&rsquo;d like to support a local pirate and get some quality
-                work done on your boat at the same time, I&rsquo;d love to hear from you.
+                I&rsquo;m highly detail-oriented and take a lot of pride in my work. I believe
+                the difference between good work and great work is in the preparation,
+                craftsmanship, and attention to the small details. As a sailor and boat owner
+                myself, I understand the importance of doing things properly and building work
+                that can stand up to the marine environment.
               </p>
-              <p className="font-semibold text-navy-950">
-                Fair winds, Pirate Taylor 🏴‍☠️
+              <p>
+                Whether it&rsquo;s bringing weathered teak back to life, repairing damaged wood,
+                or building something completely custom, I&rsquo;m passionate about what I do and
+                take pride in leaving every project better than I found it.
+              </p>
+              <p className="font-medium text-navy-950">
+                Serving San Diego and Southern California marinas.
               </p>
             </div>
 
