@@ -72,61 +72,74 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "brightwork-varnishing",
-    name: "Brightwork & Varnishing",
-    short: "Teak restoration, varnish, and oil finishes.",
+    name: "Teak & Brightwork",
+    short: "Teak restoration, varnish, and brightwork refinishing.",
     description:
-      "From tired, gray teak to a glass-smooth, deep-gloss finish — we strip, sand, and rebuild varnish and oil finishes on rails, caprails, hatches, and trim so your brightwork holds up to the sun and salt.",
+      "From weathered, gray teak to a glass-smooth, deep-gloss finish — teak is stripped, sanded, and rebuilt with varnish or oil systems that hold up to the Southern California sun and salt.",
     bullets: [
-      "Teak stripping & restoration",
+      "Teak restoration & stripping",
       "Multi-coat varnish systems",
       "Oil finishes & maintenance coats",
-      "Caprails, hatches, trim & interior wood",
+      "Rails, caprails, hatches & interior wood",
     ],
   },
   {
     slug: "marine-carpentry",
-    name: "Marine Carpentry & Custom Woodwork",
-    short: "Custom builds, repairs, and interior joinery.",
+    name: "Custom Woodwork & Carpentry",
+    short: "Companionway doors, cockpit grates, and custom builds.",
     description:
-      "Structural repairs, custom cabinetry, interior joinery, and one-off builds — built to marine standards so it fits, seals, and lasts aboard.",
+      "One-off custom pieces built to marine standards — from companionway doors and cockpit floor grates to interior cabinetry and exterior woodworking. Every piece is built to fit, seal, and last aboard.",
     bullets: [
-      "Custom cabinetry & interior joinery",
-      "Structural wood repair",
-      "Teak decking & soles",
-      "One-off custom builds",
+      "Custom companionway doors",
+      "Custom cockpit floor grates",
+      "Interior & exterior custom woodworking",
+      "Hardware & cabinetry upgrades",
+    ],
+  },
+  {
+    slug: "repairs-restoration",
+    name: "Repairs & Restoration",
+    short: "Wood rot repair, handyman work, and window replacements.",
+    description:
+      "Whether it's a small repair or a larger restoration project, every job gets done right. Wood rot addressed properly, polycarbonate windows swapped cleanly, and general boat handyman work handled with care.",
+    bullets: [
+      "Wood rot repair & replacement",
+      "Polycarbonate window replacements",
+      "General boat handyman services",
+      "Stainless & brass polishing",
     ],
   },
   {
     slug: "painting-refinishing",
-    name: "Painting & Refinishing",
-    short: "Topside painting, gelcoat, and Awlgrip finishes.",
+    name: "Painting & Deck Work",
+    short: "Topside paint and nonskid decks.",
     description:
-      "Professional topside and hull refinishing — gelcoat repair, fairing, and premium two-part paint systems for a factory-quality, long-lasting finish.",
+      "Professional topside painting and nonskid deck work — properly prepped and applied for a clean, long-lasting finish that holds up in the water.",
     bullets: [
-      "Topside & hull painting",
-      "Gelcoat repair & color matching",
-      "Awlgrip & two-part paint systems",
-      "Fairing & surface prep",
+      "Topside paint",
+      "Nonskid deck application",
+      "Surface prep & fairing",
+      "Cosmetic refresh & touch-ups",
     ],
   },
   {
-    slug: "marine-electrical",
-    name: "Marine Electrical",
-    short: "Wiring, panel upgrades, and troubleshooting.",
+    slug: "systems-upgrades",
+    name: "Systems & Upgrades",
+    short: "Solar, electrical, and onboard system installs.",
     description:
-      "Clean, code-compliant electrical work — from tracking down a stubborn short to full panel upgrades and new installs for electronics and accessories.",
+      "Practical upgrades that make life aboard easier and more efficient — solar system installs, electrical and hardware upgrades, and even custom compost toilet installations.",
     bullets: [
-      "Wiring & rewiring",
-      "Panel & breaker upgrades",
-      "Troubleshooting & repair",
-      "Electronics & accessory installs",
+      "Solar system installation",
+      "Electrical upgrades & wiring",
+      "Custom compost toilet installation",
+      "Hardware & accessory installs",
     ],
   },
 ];
 
-// Soft-mention only — not billed as core services until confirmed.
+// Soft-mention only
 export const relatedServices = [
   "Fiberglass repair",
-  "Teak deck restoration",
-  "Custom canvas & upholstery referrals",
+  "Canvas & upholstery referrals",
+  "Engine compartment work",
 ];

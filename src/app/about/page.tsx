@@ -7,29 +7,29 @@ import { business } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Pirate Taylor's Marine | Chula Vista & San Diego Marine Carpenter",
   description:
-    "Pirate Taylor's Marine is a 5-star rated marine carpentry and refinishing company based at 640 Marina Pkwy, Chula Vista, CA. Serving San Diego and Southern California boat owners.",
+    "Taylor Arroway is a local marine carpenter with over 10 years of experience serving boat owners across Southern California marinas. Based in San Diego, specializing in teak restoration, custom woodwork, painting, and more.",
   alternates: { canonical: "https://piratetaylorsmarine.com/about" },
   openGraph: {
     title: "About Pirate Taylor's Marine | Chula Vista & San Diego Marine Carpenter",
     description:
-      "5-star rated marine carpentry and refinishing based in Chula Vista, CA. Serving San Diego and all of Southern California.",
+      "10+ years of marine carpentry experience. Teak restoration, custom woodwork, painting, solar installs, and more. Serving San Diego and Southern California.",
     url: "https://piratetaylorsmarine.com/about",
   },
 };
 
-const values = [
-  {
-    title: "Marine-Grade Standards",
-    body: "Every repair and build is done to hold up against sun, salt, and open water — not just look good on day one.",
-  },
-  {
-    title: "Honest Estimates",
-    body: "You'll know the scope and the cost before work starts, with no surprises when the invoice arrives.",
-  },
-  {
-    title: "Respect for the Boat",
-    body: "We treat every vessel — daysailer or long-range cruiser — like it's our own, from prep through final walkthrough.",
-  },
+const specialties = [
+  "Teak restoration and varnish work",
+  "Custom companionway doors",
+  "Custom cockpit floor grates",
+  "Wood rot repair",
+  "Stainless & brass polishing",
+  "Custom compost toilets",
+  "Topside paint and nonskid decks",
+  "Custom woodworking interior and exterior",
+  "General boat handyman services",
+  "Solar system installation",
+  "Hardware, cabinetry & electrical upgrades",
+  "Polycarbonate window replacements",
 ];
 
 export default function AboutPage() {
@@ -39,10 +39,10 @@ export default function AboutPage() {
         <Container>
           <span className="flex w-fit items-center gap-2 rounded-full border border-brass-500/40 bg-brass-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-400">
             <AnchorIcon className="h-3.5 w-3.5" />
-            About Us
+            About
           </span>
           <h1 className="font-display mt-6 max-w-2xl text-4xl sm:text-5xl">
-            Marine carpentry &amp; refinishing, built on craft and word of mouth.
+            Local marine carpenter. 10+ years of experience. Fair winds guaranteed.
           </h1>
         </Container>
       </section>
@@ -51,54 +51,52 @@ export default function AboutPage() {
         <Container className="grid grid-cols-1 gap-14 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <h2 className="font-display text-2xl text-navy-950 sm:text-3xl">
-              Our Story
+              Meet Taylor
             </h2>
-            {/* TODO: replace with the real founder story / company history */}
             <div className="mt-5 space-y-4 text-navy-800/85 leading-relaxed">
               <p>
-                {business.name} is a {business.primaryCity}-based marine
-                carpentry and refinishing outfit built around one idea: boats
-                deserve craftsmanship, not shortcuts. What started as
-                hands-on brightwork and carpentry work around local marinas
-                has grown into a full-service shop covering woodwork,
-                painting, and marine electrical.
+                My name is Taylor Arroway, owner of Pirate Taylor&rsquo;s Marine Services.
+                I&rsquo;m a local marine carpenter based in San Diego serving boat owners
+                throughout Southern California marinas with over 10 years of carpentry experience.
               </p>
               <p>
-                Whether it&rsquo;s bringing tired teak back to a deep-gloss
-                finish, building a custom piece for a cabin, or tracking down
-                an electrical gremlin, every job gets the same attention to
-                detail — because a boat only gets one hull, and it deserves
-                to be done right.
+                Whether your boat needs a small repair, a cosmetic refresh, or a larger
+                restoration project, I&rsquo;d be happy to help keep it looking and functioning
+                its best. I pride myself on high quality and budget friendly work.
               </p>
               <p>
-                Today, we work with boat owners, brokers, and yards across
-                San Diego and Southern California, on everything from single
-                repairs to full interior and exterior refits.
+                I&rsquo;m working hard to grow my business and build up a solid project
+                schedule. If you&rsquo;d like to support a local pirate and get some quality
+                work done on your boat at the same time, I&rsquo;d love to hear from you.
+              </p>
+              <p className="font-semibold text-navy-950">
+                Fair winds, Pirate Taylor 🏴‍☠️
               </p>
             </div>
 
             <h2 className="font-display mt-12 text-2xl text-navy-950 sm:text-3xl">
-              How We Work
+              I Specialize In
             </h2>
-            <ul className="mt-5 space-y-3">
-              {[
-                "Free on-boat or in-yard consultation and estimate",
-                "Clear scope of work and timeline before we start",
-                "Marine-grade materials and finishes throughout",
-                "Final walkthrough so you sign off on every detail",
-              ].map((item) => (
+            <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {specialties.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-navy-800/85">
                   <CheckIcon className="mt-1 h-4 w-4 shrink-0 text-brass-500" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10">
+              <Button href="/contact" variant="primary">
+                Send a Message or Get a Quote
+              </Button>
+            </div>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 space-y-6">
             <div className="rounded-sm border border-teak-200 bg-cream-100 p-8">
               <h3 className="font-display text-xl text-navy-950">
-                Where We Work
+                Where I Work
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-navy-800/80">
                 Based in {business.primaryCity}, working boatyards, marinas,
@@ -114,25 +112,30 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="mt-6 rounded-sm bg-navy-950 p-8 text-cream-100">
-              <h3 className="font-display text-xl">Our Values</h3>
+            <div className="rounded-sm bg-navy-950 p-8 text-cream-100">
+              <h3 className="font-display text-xl">By the Numbers</h3>
               <div className="mt-5 space-y-5">
-                {values.map((v) => (
-                  <div key={v.title}>
-                    <p className="font-semibold text-brass-400">{v.title}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-cream-200/80">
-                      {v.body}
-                    </p>
+                {[
+                  { stat: "10+", label: "Years of carpentry experience" },
+                  { stat: "5★",  label: "Google rating (3 reviews)" },
+                  { stat: "12",  label: "Services offered" },
+                ].map((v) => (
+                  <div key={v.label}>
+                    <p className="font-display text-2xl text-brass-400">{v.stat}</p>
+                    <p className="mt-1 text-sm text-cream-200/80">{v.label}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="mt-6 text-center">
-              <Button href="/contact" variant="primary" className="w-full">
-                Get a Free Quote
-              </Button>
-            </div>
+            <a
+              href={business.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 rounded-sm border border-teak-300 bg-white px-6 py-3 text-sm font-semibold text-navy-950 hover:border-brass-500 hover:text-brass-600 transition-colors"
+            >
+              See reviews on Google →
+            </a>
           </div>
         </Container>
       </section>

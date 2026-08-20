@@ -34,6 +34,8 @@ const REVIEWS = [
 
 const serviceIcons: Record<string, ComponentType<{ className?: string }>> = {
   "brightwork-varnishing": VarnishIcon,
+  "repairs-restoration": CarpentryIcon,
+  "systems-upgrades": BoltIcon,
   "marine-carpentry": CarpentryIcon,
   "painting-refinishing": PaintIcon,
   "marine-electrical": BoltIcon,

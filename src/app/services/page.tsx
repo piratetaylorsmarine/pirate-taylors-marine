@@ -13,9 +13,9 @@ import {
 import { business, services, relatedServices } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Marine Carpentry & Brightwork Services — Chula Vista & San Diego, CA",
+  title: "Marine Carpentry Services — Teak, Custom Woodwork, Painting & More | San Diego, CA",
   description:
-    "Brightwork & varnishing, custom marine carpentry, boat painting & refinishing, and marine electrical — serving Chula Vista, San Diego, Coronado, and all of Southern California. Free estimates.",
+    "Teak restoration, custom companionway doors, cockpit grates, wood rot repair, topside painting, solar installs, and more — serving Chula Vista, San Diego, and all of Southern California. Free estimates.",
   alternates: { canonical: "https://piratetaylorsmarine.com/services" },
   openGraph: {
     title: "Marine Carpentry & Brightwork Services — Chula Vista & San Diego, CA",
@@ -28,8 +28,9 @@ export const metadata: Metadata = {
 const serviceIcons: Record<string, ComponentType<{ className?: string }>> = {
   "brightwork-varnishing": VarnishIcon,
   "marine-carpentry": CarpentryIcon,
+  "repairs-restoration": CarpentryIcon,
   "painting-refinishing": PaintIcon,
-  "marine-electrical": BoltIcon,
+  "systems-upgrades": BoltIcon,
 };
 
 const process = [
