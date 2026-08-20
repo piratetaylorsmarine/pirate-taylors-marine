@@ -22,14 +22,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-teak-200 bg-white/95 backdrop-blur shadow-sm">
-      <Container className="flex h-24 items-center justify-between">
+      <Container className="flex h-32 items-center justify-between">
         <Link
           href="/"
           className="flex items-center"
           onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.jpg" alt={business.name} className="h-20 w-auto object-contain" />
+          <img src="/logo.jpg" alt={business.name} className="h-28 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
