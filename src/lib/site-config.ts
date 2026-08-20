@@ -77,7 +77,7 @@ export const services: Service[] = [
     description:
       "From weathered, gray teak to a glass-smooth, deep-gloss finish — teak is stripped, sanded, and rebuilt with varnish or oil systems that hold up to the Southern California sun and salt.",
     bullets: [
-      "Teak restoration & stripping",
+      "Teak Restoration and Brightwork",
       "Multi-coat varnish systems",
       "Oil finishes & maintenance coats",
       "Rails, caprails, hatches & interior wood",
