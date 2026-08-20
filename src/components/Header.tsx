@@ -16,6 +16,12 @@ const links = [
   { href: "/contact", label: "Get a Quote" },
 ];
 
+// Desktop nav is split left/right around the centred logo — "Get a Quote"
+// is dropped from the split since the CTA button on the right covers it.
+const navLinks = links.filter((l) => l.href !== "/contact");
+const leftLinks = navLinks.slice(0, 3);
+const rightLinks = navLinks.slice(3);
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -23,8 +29,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-brass-400/50 bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
 
-      {/* Row 1 — hamburger left on mobile, logo centred on desktop */}
-      <Container className="flex items-center justify-between lg:justify-center">
+      {/* Single row — hamburger + logo on mobile; nav-left / logo-center / nav+phone+CTA-right on desktop */}
+      <Container className="flex items-center justify-between gap-4 py-2 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:py-3">
 
         {/* Hamburger — mobile only, sits LEFT */}
         <button
@@ -36,26 +42,42 @@ export function Header() {
           {open ? <CloseIcon className="h-7 w-7" /> : <MenuIcon className="h-7 w-7" />}
         </button>
 
+        {/* Nav — left half, desktop only */}
+        <nav className="hidden items-center gap-7 lg:flex">
+          {leftLinks.map((link) => {
+            const active = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                  active ? "text-crimson-500" : "text-navy-800 hover:text-crimson-500"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+
         {/* Logo — right on mobile, centred on desktop */}
         <Link
           href="/"
-          className="flex items-center leading-none"
+          className="flex items-center justify-center leading-none"
           onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.jpg"
             alt={business.name}
-            style={{ display: 'block', height: '96px', width: 'auto', background: 'white' }}
+            style={{ display: 'block', height: '76px', width: 'auto', background: 'white' }}
           />
         </Link>
-      </Container>
 
-      {/* Row 2 — nav bar, desktop only */}
-      <div className="hidden border-t border-brass-400/30 lg:block">
-        <Container className="flex items-center justify-between py-2.5">
-          <nav className="flex items-center gap-8">
-            {links.map((link) => {
+        {/* Nav (right half) + phone + CTA — right, desktop only */}
+        <div className="hidden items-center justify-end gap-7 lg:flex">
+          <nav className="flex items-center gap-7">
+            {rightLinks.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
@@ -70,23 +92,21 @@ export function Header() {
               );
             })}
           </nav>
-          <div className="flex items-center gap-4">
-            <a
-              href={`tel:${business.phoneTel}`}
-              className="flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-crimson-500"
-            >
-              <PhoneIcon className="h-4 w-4" />
-              {business.phoneDisplay}
-            </a>
-            <Link
-              href="/contact"
-              className="rounded-sm bg-crimson-500 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-crimson-600"
-            >
-              Get a Quote
-            </Link>
-          </div>
-        </Container>
-      </div>
+          <a
+            href={`tel:${business.phoneTel}`}
+            className="flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-crimson-500"
+          >
+            <PhoneIcon className="h-4 w-4" />
+            {business.phoneDisplay}
+          </a>
+          <Link
+            href="/contact"
+            className="rounded-sm bg-crimson-500 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-crimson-600"
+          >
+            Get a Quote
+          </Link>
+        </div>
+      </Container>
 
       {/* Mobile menu */}
       {open && (
