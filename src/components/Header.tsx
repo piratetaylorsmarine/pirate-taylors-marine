@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "./Container";
-import { WheelIcon, PhoneIcon, MenuIcon, CloseIcon } from "./icons";
+import { PhoneIcon, MenuIcon, CloseIcon } from "./icons";
 import { business } from "@/lib/site-config";
 
 const links = [
@@ -22,11 +22,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
       <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <WheelIcon className="h-9 w-9 text-brass-500" />
-          <span className="font-display text-xl leading-tight text-cream-100 sm:text-2xl">
-            {business.name}
-          </span>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.jpg" alt={business.name} className="h-14 w-14 rounded-full object-cover" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
