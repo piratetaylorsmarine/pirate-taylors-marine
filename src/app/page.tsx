@@ -192,6 +192,12 @@ export default function Home() {
             <img src="/projects/Screenshot_20260819_180554_Photos.jpg" alt="Full teak cockpit restoration" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/projects/IMG_20260724_121110_177.webp" alt="Grand Banks trawler teak rubrail" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/Screenshot_20260819_180818_Photos.jpg" alt="Teak caprail with brass fitting and marina" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/Screenshot_20260819_181133_Photos.jpg" alt="Teak cockpit and wooden helm wheel under blue sky" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/projects/Screenshot_20260819_181216_Photos.jpg" alt="Freshly varnished teak companionway hatch" className="w-full rounded-sm object-cover" style={{ aspectRatio: "3/4" }} />
           </div>
         </Container>
       </section>
