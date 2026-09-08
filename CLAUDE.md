@@ -7,7 +7,12 @@ Marine carpentry marketing site (piratetaylorsmarine.com).
 ## Stack
 Next.js 16.3.1, React 19.2.8, TypeScript, ESLint. Deployed on Vercel via push to `main` on GitHub (`piratetaylorsmarine/pirate-taylors-marine`).
 
-**This repo's GitHub remote is owned by the `piratetaylorsmarine` account, not the personal `Simeon2509` account used for the other sites.** `gh`/git credential helper on the usual dev machine is authenticated as `piratetaylorsmarine` via a fine-grained PAT — push with plain `git push origin main`.
+**This repo's GitHub remote is owned by the `piratetaylorsmarine` account, not the personal `Simeon2509` account used for the other sites.** Both accounts are logged into `gh` via keyring, but `gh`'s credential helper only serves the currently-*active* account's token to git, regardless of which repo you're in. If `Simeon2509` is active (the usual default), a plain `git push` here fails with 403. Before pushing:
+```
+gh auth switch --hostname github.com --user piratetaylorsmarine
+git push origin main
+gh auth switch --hostname github.com --user Simeon2509   # switch back afterward
+```
 
 ## Commands
 - `npm run dev` / `npm run build` / `npm run start`
