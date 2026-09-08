@@ -28,3 +28,9 @@ gh auth switch --hostname github.com --user Simeon2509   # switch back afterward
 
 ## Workflow
 Once a change is verified (`tsc` + local dev render check), commit and push without stopping to ask for confirmation — approved by the user 2026-08-20 for this repo specifically.
+
+## Hosting & DNS
+Deployed on its own separate Vercel account (not Simeon's personal one). Domain DNS is on its own separate Porkbun account (porkbun.com) — also not Simeon's personal one. This matches the GitHub setup above: this business is kept on fully separate accounts end-to-end.
+
+## Sibling sites
+This is one of four marketing sites Simeon runs; the other three (colodrone.com, denverwebcrew.com, sillygoosepottery.com) share his personal GitHub/Vercel/Porkbun accounts and a lighter Next.js 14/React 18 stack — this site runs newer versions (Next 16/React 19) and is otherwise unrelated infrastructure-wise. Don't assume a fix here transfers to those, or vice versa.
